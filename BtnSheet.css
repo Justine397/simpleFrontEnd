@@ -1,0 +1,78 @@
+body{
+    background-color: yellow;
+}
+.rBTN {
+    background-color: #cf0000;
+    border: 1px solid black ;
+    border-radius: 30px;
+    box-shadow: 0px 15px #999;
+    font-size: 50px;
+    position:absolute;
+    top:50px;
+    left:100px;
+    height: 275px;
+    width: 25%;
+    color: #d6d2d2;
+    padding: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    }
+.rBTN:hover {
+    background-color: red;
+    color:white;
+}
+.rBTN:active{
+    box-shadow: 0 2px #666;
+    transform: translateY(13px);
+}
+.gBTN {
+    background-color: #11c700;
+    border: 1px solid black;
+    border-radius: 30px;
+    box-shadow: 0px 15px #999;
+    font-size: 50px;
+    position:absolute;
+    top:50px;
+    left:570px;
+    height: 275px;
+    width: 25%;
+    color: #d6d2d2;
+    padding: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}       
+.gBTN:hover{
+    background-color: #1afa05;
+    color:white;   
+}
+.gBTN:active{
+    box-shadow: 0 2px #666;
+    transform: translateY(13px);
+}
+.bBTN {
+    background-color: #001085;
+    border: 1px solid black;
+    border-radius: 30px;
+    box-shadow: 0px 15px #999;
+    font-size: 50px;
+    position:absolute;
+    top:50px;
+    left:1030px;
+    height: 275px;
+    width: 25%;
+    color: #d6d2d2;
+    padding: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}    
+.bBTN:hover{
+    background-color: #001eff;
+    color:white;   
+}
+.bBTN:active{
+    box-shadow: 0 2px #666;
+    transform: translateY(13px);
+}
