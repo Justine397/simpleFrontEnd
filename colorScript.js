@@ -1,15 +1,29 @@
-function redBG(){
-    document.body.style.background = 'red';
-    setTimeout(BackToOG, 2000);
+var timer = null;
+
+function redBG() {
+    if (timer) {
+        clearTimeout(timer);
+        timer = null;
+    }
+    document.body.style.background = "red";
+    timer = setTimeout(BackToOG, 1300);
 }
-function greenBG(){
-    document.body.style.background = 'green';
-    setTimeout(BackToOG, 2000);
+function greenBG() {
+    if (timer) {
+        clearTimeout(timer);
+        timer = null;
+    }
+    document.body.style.background = "green";
+    timer = setTimeout(BackToOG, 1300);
 }
-function blueBG(){
+function blueBG() {
+    if (timer) {
+        clearTimeout(timer);
+        timer = null;
+    }
     document.body.style.background = "blue";
-    setTimeout(BackToOG, 2000);
+    timer = setTimeout(BackToOG, 1300);
 }
-function BackToOG(){
-    document.body.style.background = 'yellow';
+function BackToOG() {
+    document.body.style.background = "#00fff2";
 }

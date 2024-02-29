@@ -1,5 +1,5 @@
 body{
-    background-color: yellow;
+    background-color: #00fff2;
 }
 .rBTN {
     background-color: #cf0000;
@@ -44,7 +44,7 @@ body{
     cursor: pointer;
 }       
 .gBTN:hover{
-    background-color: #1afa05;
+    background-color: #7c3f00;
     color:white;   
 }
 .gBTN:active{
