@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <style>
+        .circle1{
+            height: 200px;
+            width: 200px;
+            position:absolute;
+            top: 250px;
+            left: 580px;
+            border: 10px solid white;
+            border-radius: 100%;
+            
+            border-top-color: black;
+            animation: rotate 2000ms;
+            animation-iteration-count: infinite;
+        }
+
+        .circle2{
+            height: 180px;
+            width: 180px;
+            border: 10px solid white;
+            
+            border-top-color: black;
+            border-radius: 100%;
+            margin: auto;
+            animation: rotate 3500ms;
+            animation-iteration-count: infinite;
+        }
+
+        .circle3{
+            height: 160px;
+            width: 160px;
+            border: 10px solid white;
+           
+            border-top-color: black;
+            border-radius: 100%;
+            margin: auto;
+            animation: rotate 3500ms;
+            animation-iteration-count: infinite;
+        }
+        
+        .circle4{
+            height: 140px;
+            width: 140px;
+            background-color: #00fff9;
+            border: 10px solid white;
+            border-top-color: black;
+            border-radius: 100%;
+            margin: auto;
+            animation: rotate 3500ms;
+            animation-iteration-count: infinite;
+        }
+        
+        .circle5{
+            height: 120px;
+            width: 120px;
+            background-color: #00fff9;
+            border-radius: 100%;
+            margin: auto;
+            padding: 10px;
+            animation: rotate 1000ms;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes rotate {
+            from{
+                transform: rotate(0turn);
+            }
+            to{
+                transform: rotate(1turn);
+            }
+        }
+    </style>
+</head>
+<body>
+
+        <div class="circle1">
+            <div class="circle2">
+                <div class="circle3">
+                    <div class="circle4">
+                        <div class="circle5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
