@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Input</title>
+</head>
+<body>
+    <input type="number" id="add">
+    <br>
+    <input type="number" id="subtract">
+    <br>
+    <input type="number" value="100" id="result" readonly>
+    
+    <script>
+        var addInput = document.getElementById('add');
+        var subInput = document.getElementById('subtract');
+        var resultInput = document.getElementById('result');
+
+        var initialValue = parseFloat(resultInput.value) || 0;
+
+        addInput.addEventListener('input', updateResult);
+        subInput.addEventListener('input', updateResult);
+
+        function updateResult() {
+            var addValue = parseFloat(addInput.value) || 0;
+            var subValue = parseFloat(subInput.value) || 0;
+            var resultValue = initialValue + addValue - subValue;
+            
+            resultInput.value = resultValue;
+        }
+        
+        updateResult();
+    </script>
+</body>
+</html>
