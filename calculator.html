@@ -1,34 +1,32 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 </head>
 <body>
     <h1>Calculator</h1>
 
-    <label for="firstOp">Enter first Number: </label>
+    <label for="firstOp"> Enter first Num:</label>
     <input type="number" id="firstOp">
-    <br>
     <br>
     <select id="operations">
         <option value="add"> + </option>
         <option value="subtract"> - </option>
         <option value="multiply"> * </option>
         <option value="divide"> / </option>
-    </select>    
+    </select>
     <br>
-    <br>
-    <label for="secondOp">Enter second Number: </label>
+    <label for="secondOp"> Enter second Num:</label>
     <input type="number" id="secondOp">
-
     <br>
-    <br>
-    <input type="submit" id="btn" value="=">
-
+    <hr>
     <div id="result"></div>
 
     <script>
-        document.getElementById('btn').addEventListener('click', function(){
+        
+        document.getElementById('secondOp').addEventListener('input', function(){
             var firstNum = parseFloat(document.getElementById('firstOp').value);
             var secondNum = parseFloat(document.getElementById('secondOp').value);
             var operation = document.getElementById('operations').value;
@@ -38,31 +36,26 @@
                 case 'add': 
                     result = firstNum + secondNum;
                     break;
-
-                case 'subtract': 
+                case 'subtract':
                     result = firstNum - secondNum;
                     break;
-
-                case 'multiply': 
+                case 'multiply':
                     result = firstNum * secondNum;
                     break;
-
                 case 'divide': 
                     if(secondNum !==0){
                         result = firstNum / secondNum;
                     }else{
-                        result = 'Cannot divide by Zero';
+                        result = 'Cannot Divide by Zero';
                     }
                     break;
-                    
                 default:
                     result = 'Invalid Operation';
-                
             }
 
-            document.getElementById('result').innerText = result;
+            document.getElementById('result').innerHTML = result;
         });
     </script>
-    
+
 </body>
 </html>
