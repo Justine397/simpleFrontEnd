@@ -6,31 +6,62 @@
     <title>Dynamic Input</title>
 </head>
 <body>
+    Add <br>
     <input type="number" id="add">
-    <br>
+    <br><br>
+    
+    Subtract <br>
     <input type="number" id="subtract">
-    <br>
+    <br><br>
+
     <input type="number" value="100" id="result" readonly>
+    <br>
+    <br>
+    <button id="btn">🌚</button>
+
+
     
     <script>
         var addInput = document.getElementById('add');
         var subInput = document.getElementById('subtract');
         var resultInput = document.getElementById('result');
 
-        var initialValue = parseFloat(resultInput.value) || 0;
+        var initialValue = parseFloat(resultInput.value);
 
         addInput.addEventListener('input', updateResult);
         subInput.addEventListener('input', updateResult);
-
+        
         function updateResult() {
             var addValue = parseFloat(addInput.value) || 0;
             var subValue = parseFloat(subInput.value) || 0;
-            var resultValue = initialValue + addValue - subValue;
             
+            var resultValue = initialValue + addValue - subValue;
+
+            resultValue = +resultValue.toFixed(10);
+
             resultInput.value = resultValue;
+
+            if (resultValue > 100) {
+                resultInput.style.borderColor = 'red';
+            } else if (resultValue < 100) {
+                resultInput.style.borderColor = 'blue';
+            } else {
+                resultInput.style.borderColor = '';
+            }
+            
         }
         
         updateResult();
+        
+        document.getElementById('btn').onclick = function(){
+            if(this.innerHTML == '☀️'){
+                document.body.style.backgroundColor = 'white';
+                this.innerHTML = '🌚';
+            } else{
+                document.body.style.backgroundColor = 'black';
+                this.innerHTML = '☀️';
+            }
+        };
     </script>
 </body>
 </html>
